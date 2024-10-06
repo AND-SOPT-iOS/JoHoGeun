@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     private let textField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "텍스트 입력"
+        textField.textAlignment = .center
         textField.clearButtonMode = .whileEditing
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.borderWidth = 1
@@ -86,6 +87,8 @@ class ViewController: UIViewController {
     private func setLayout() {
         NSLayoutConstraint.activate(
             [
+                textField.widthAnchor.constraint(equalToConstant: 300),
+                textField.heightAnchor.constraint(equalToConstant: 40),
                 titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
                 
