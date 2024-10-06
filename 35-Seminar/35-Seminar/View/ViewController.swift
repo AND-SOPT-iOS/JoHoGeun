@@ -45,6 +45,20 @@ class ViewController: UIViewController {
         return button
     }()
     
+    private lazy var switchButton: UISwitch = {
+        let switchButton = UISwitch()
+        switchButton.addTarget(self, action: #selector(switchButtonTapped), for: .valueChanged)
+        return switchButton
+    }()
+    
+    private let heartImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(systemName: "heart.fill"))
+        imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .red
+        imageView.isHidden = true
+        return imageView
+    }()
+    
     private var pushMode: Bool = true
     
     override func viewDidLoad() {
@@ -60,7 +74,9 @@ class ViewController: UIViewController {
             titleLabel,
             textField,
             nextButton,
-            modeToggleButton
+            modeToggleButton,
+            switchButton,
+            heartImageView
         ].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview($0)
@@ -70,19 +86,27 @@ class ViewController: UIViewController {
     private func setLayout() {
         NSLayoutConstraint.activate(
             [
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
-            
-            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 60),
-            
-            nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nextButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 60),
-            nextButton.widthAnchor.constraint(equalToConstant: 100),
-            
-            modeToggleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            modeToggleButton.topAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: 60),
-            modeToggleButton.widthAnchor.constraint(equalToConstant: 100)
+                titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+                
+                textField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 60),
+                
+                nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                nextButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 60),
+                nextButton.widthAnchor.constraint(equalToConstant: 100),
+                
+                modeToggleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                modeToggleButton.topAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: 60),
+                modeToggleButton.widthAnchor.constraint(equalToConstant: 100),
+                
+                switchButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                switchButton.topAnchor.constraint(equalTo: modeToggleButton.bottomAnchor, constant: 60),
+                
+                heartImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                heartImageView.topAnchor.constraint(equalTo: switchButton.bottomAnchor, constant: 60),
+                heartImageView.widthAnchor.constraint(equalToConstant: 50),
+                heartImageView.heightAnchor.constraint(equalToConstant: 50)
             ]
         )
     }
@@ -112,6 +136,14 @@ class ViewController: UIViewController {
     @objc func toggleButtonTapped() {
         self.pushMode.toggle()
         self.updateUI()
+    }
+    
+    @objc func switchButtonTapped(_ sender: UISwitch) {
+        if sender.isOn {
+            heartImageView.isHidden = false
+        } else {
+            heartImageView.isHidden = true
+        }
     }
 }
 
