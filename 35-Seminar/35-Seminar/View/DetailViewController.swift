@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 36, weight: .bold)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -48,6 +49,8 @@ class DetailViewController: UIViewController {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
             backButton.topAnchor.constraint(
                 equalTo: titleLabel.bottomAnchor,
