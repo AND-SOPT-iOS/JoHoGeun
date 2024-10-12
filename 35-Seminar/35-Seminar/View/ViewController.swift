@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
     
@@ -25,6 +26,14 @@ class ViewController: UIViewController {
         label.textColor = .brown
         label.font = .systemFont(ofSize: 32, weight: .bold)
         label.numberOfLines = 2
+        return label
+    }()
+    
+    private let nicknameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "닉네임: "
+        label.font = .systemFont(ofSize: 32, weight: .bold)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -61,6 +70,7 @@ class ViewController: UIViewController {
     }()
     
     private var pushMode: Bool = true
+    private var nickname: String = " "
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +83,7 @@ class ViewController: UIViewController {
     private func setUI() {
         [
             titleLabel,
+            nicknameLabel,
             textField,
             nextButton,
             modeToggleButton,
@@ -92,8 +103,13 @@ class ViewController: UIViewController {
                 titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
                 
+                nicknameLabel.widthAnchor.constraint(equalToConstant: 300),
+                nicknameLabel.heightAnchor.constraint(equalToConstant: 40),
+                nicknameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                nicknameLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 60),
+                
                 textField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 60),
+                textField.topAnchor.constraint(equalTo: nicknameLabel.bottomAnchor, constant: 60),
                 
                 nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 nextButton.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 60),
@@ -120,10 +136,14 @@ class ViewController: UIViewController {
     
     private func transitionToNextViewController() {
         let nextViewController = DetailViewController()
+        nextViewController.delegate = self
         
         guard let title = textField.text else { return  }
         
         nextViewController.dataBind(title: title)
+        nextViewController.completionHandler = { [weak self] nickname in
+            self?.nicknameLabel.text = "Handler: " + nickname
+        }
         
         if pushMode {
             self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -147,6 +167,13 @@ class ViewController: UIViewController {
         } else {
             heartImageView.isHidden = true
         }
+    }
+}
+
+extension ViewController: NicknameDelegate {
+    func dataBind(nickname: String) {
+        self.nickname = nickname
+        nicknameLabel.text = "닉네임: " + self.nickname
     }
 }
 
