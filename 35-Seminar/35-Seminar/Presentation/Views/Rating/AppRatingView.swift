@@ -9,14 +9,14 @@ import UIKit
 
 final class AppRatingView: UIView {
     
-    private let ratingScoreView = RatingItemView(topText: "8.4만개의 평가", middleText: "4.4")
-    private let awardView = RatingItemView(topText: "수상", bottomText: "앱")
-    private let ageRatingView = RatingItemView(topText: "연령", middleText: "4+", bottomText: "세")
+    private let ratingScoreView = RatingItemView()
+    private let awardView = RatingItemView()
+    private let ageRatingView = RatingItemView()
     private let firstDividerView = UIView()
     private let secondDividerView = UIView()
     
-    init() {
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         setStyle()
         setUI()
@@ -27,17 +27,21 @@ final class AppRatingView: UIView {
         super.init(coder: coder)
     }
     
-    func setStyle() {
+    private func setStyle() {
+        ratingScoreView.configure(topText: "8.4만개의 평가", middleText: "4.4")
+        awardView.configure(topText: "수상", bottomText: "앱")
+        ageRatingView.configure(topText: "연령", middleText: "4+", bottomText: "세")
+        
         [firstDividerView, secondDividerView].forEach {
             $0.backgroundColor = .systemGray
         }
     }
     
-    func setUI() {
+    private func setUI() {
         self.addSubviews(ratingScoreView, firstDividerView, awardView, secondDividerView, ageRatingView)
     }
     
-    func setLayout() {
+    private func setLayout() {
         let itemWidth = UIScreen.main.bounds.width / 3
         
         ratingScoreView.snp.makeConstraints {

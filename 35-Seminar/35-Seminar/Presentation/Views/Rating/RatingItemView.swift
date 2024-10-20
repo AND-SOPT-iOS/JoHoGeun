@@ -10,85 +10,68 @@ import SnapKit
 
 final class RatingItemView: UIView {
     
-    private let topLabel = UILabel()
-    private lazy var middleLabel = UILabel()
-    private lazy var middlePersonView = UIImageView()
-    private lazy var bottomLabel = UILabel()
-    private lazy var bottomStarView = UILabel()
+    private lazy var topLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 12, weight: .bold)
+        label.textColor = .systemGray
+        label.textAlignment = .center
+        return label
+    }()
     
-    init(topText: String, middleText: String? = nil, bottomText: String? = nil) {
-        super.init(frame: .zero)
-        
-        setStyle(topText: topText, middleText: middleText, bottomText: bottomText)
-        setUI(topText: topText, middleText: middleText, bottomText: bottomText)
-        setLayout(topText: topText, middleText: middleText, bottomText: bottomText)
-    }
+    private lazy var middleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 32, weight: .bold)
+        label.textColor = .systemGray
+        label.textAlignment = .center
+        return label
+    }()
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
+    private lazy var middlePersonView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.tintColor = .systemGray
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
     
-    private func setStyle(topText: String, middleText: String? = nil, bottomText: String? = nil) {
-        
-        topLabel.text = topText
-        topLabel.font = .systemFont(ofSize: 12, weight: .bold)
-        topLabel.textColor = .systemGray
-        topLabel.textAlignment = .center
-        
-        if let middleText = middleText {
-            middleLabel.text = middleText
-            middleLabel.font = .systemFont(ofSize: 32, weight: .bold)
-            middleLabel.textColor = .systemGray
-            middleLabel.textAlignment = .center
-        } else {
-            middlePersonView.image = UIImage(systemName: "person.fill")
-            middlePersonView.tintColor = .systemGray
-            middlePersonView.contentMode = .scaleAspectFit
-        }
-        
-        if let bottomText = bottomText {
-            bottomLabel.text = bottomText
-            bottomLabel.font = .systemFont(ofSize: 24, weight: .semibold)
-            bottomLabel.textColor = .systemGray
-            bottomLabel.textAlignment = .center
-        } else {
-            bottomLabel.isHidden = true
-            bottomStarView.text = "★★★★☆"
-            bottomStarView.font = .systemFont(ofSize: 20)
-            bottomStarView.textColor = .systemGray
-            bottomStarView.textAlignment = .center
-        }
-    }
+    private lazy var bottomLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 24, weight: .semibold)
+        label.textColor = .systemGray
+        label.textAlignment = .center
+        return label
+    }()
     
-    private func setUI(topText: String, middleText: String? = nil, bottomText: String? = nil) {
+    private lazy var bottomStarView: UILabel = {
+        let label = UILabel()
+        label.text = "★★★★☆"
+        label.font = .systemFont(ofSize: 20)
+        label.textColor = .systemGray
+        label.textAlignment = .center
+        return label
+    }()
+    
+    func configure(topText: String, middleText: String? = nil, bottomText: String? = nil) {
+        
+        subviews.forEach { $0.removeFromSuperview() }
+        
         addSubview(topLabel)
-        
-        if middleText != nil {
-            addSubview(middleLabel)
-        } else {
-            addSubview(middlePersonView)
-        }
-        
-        if bottomText != nil {
-            addSubview(bottomLabel)
-        } else {
-            addSubview(bottomStarView)
-        }
-    }
-    
-    private func setLayout(topText: String, middleText: String? = nil, bottomText: String? = nil) {
+        topLabel.text = topText
         topLabel.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.equalToSuperview().offset(-16)
         }
         
-        if middleText != nil {
+        if let middleText = middleText {
+            addSubview(middleLabel)
+            middleLabel.text = middleText
             middleLabel.snp.makeConstraints {
                 $0.top.equalTo(topLabel.snp.bottom).offset(12)
                 $0.leading.trailing.equalToSuperview()
             }
         } else {
+            addSubview(middlePersonView)
+            middlePersonView.image = UIImage(systemName: "person.fill")
             middlePersonView.snp.makeConstraints {
                 $0.top.equalTo(topLabel.snp.bottom).offset(12)
                 $0.centerX.equalToSuperview()
@@ -96,12 +79,15 @@ final class RatingItemView: UIView {
             }
         }
         
-        if bottomText != nil {
+        if let bottomText = bottomText {
+            addSubview(bottomLabel)
+            bottomLabel.text = bottomText
             bottomLabel.snp.makeConstraints {
                 $0.top.equalTo(middleText != nil ? middleLabel.snp.bottom : middlePersonView.snp.bottom).offset(4)
                 $0.leading.trailing.bottom.equalToSuperview()
             }
         } else {
+            addSubview(bottomStarView)
             bottomStarView.snp.makeConstraints {
                 $0.top.equalTo(middleText != nil ? middleLabel.snp.bottom : middlePersonView.snp.bottom).offset(4)
                 $0.leading.trailing.bottom.equalToSuperview()
@@ -114,16 +100,26 @@ final class RatingItemView: UIView {
 import SwiftUI
 
 #Preview {
-    Spacer()
-    RatingItemView(topText: "8.4만개의 평가", middleText: "4.4").toPreview()
-        .frame(width: 130, height: 90)
-    Spacer()
-    RatingItemView(topText: "수상", bottomText: "앱").toPreview()
-        .frame(width: 130, height: 90)
-    Spacer()
-    RatingItemView(topText: "연령", middleText: "4+", bottomText: "세").toPreview()
-        .frame(width: 130, height: 90)
-    Spacer()
+    let ratingView1 = RatingItemView()
+    ratingView1.configure(topText: "8.4만개의 평가", middleText: "4.4")
+    
+    let ratingView2 = RatingItemView()
+    ratingView2.configure(topText: "수상", bottomText: "앱")
+    
+    let ratingView3 = RatingItemView()
+    ratingView3.configure(topText: "연령", middleText: "4+", bottomText: "세")
+    
+    return HStack(spacing: 10) {
+        ratingView1.toPreview()
+            .frame(width: 130, height: 90)
+        
+        ratingView2.toPreview()
+                        .frame(width: 130, height: 90)
+        
+        ratingView3.toPreview()
+                        .frame(width: 130, height: 90)
+    }
+        
 }
 
 #endif
