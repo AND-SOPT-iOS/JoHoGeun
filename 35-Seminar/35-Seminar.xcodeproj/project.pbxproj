@@ -20,6 +20,8 @@
 		D62C4E4F2CC4262300394B45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C4E442CC4262300394B45 /* SceneDelegate.swift */; };
 		D62C4E502CC4262300394B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62C4E402CC4262300394B45 /* Assets.xcassets */; };
 		D62C4E522CC4262300394B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62C4E432CC4262300394B45 /* LaunchScreen.storyboard */; };
+		D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C4E562CC4298800394B45 /* AppRatingView.swift */; };
+		D62C4E5A2CC430D800394B45 /* RatingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C4E592CC430D800394B45 /* RatingItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		D62C4E412CC4262300394B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D62C4E422CC4262300394B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D62C4E442CC4262300394B45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D62C4E562CC4298800394B45 /* AppRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingView.swift; sourceTree = "<group>"; };
+		D62C4E592CC430D800394B45 /* RatingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -144,22 +148,23 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		D62C4E3E2CC4262300394B45 /* View */ = {
+		D62C4E3E2CC4262300394B45 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				D62C4E392CC4262300394B45 /* Common */,
-				D62C4E3A2CC4262300394B45 /* AppHeaderView.swift */,
+				D66B11592CC52C9F0029E065 /* Views */,
 				D62C4E542CC4267B00394B45 /* week1 */,
 			);
-			path = View;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		D62C4E452CC4262300394B45 /* 35-Seminar */ = {
 			isa = PBXGroup;
 			children = (
 				D62C4E532CC4262F00394B45 /* Application */,
-				D62C4E3E2CC4262300394B45 /* View */,
+				D62C4E3E2CC4262300394B45 /* Presentation */,
 				D62C4E552CC426AB00394B45 /* Resources */,
+				D62C4E412CC4262300394B45 /* Info.plist */,
 			);
 			path = "35-Seminar";
 			sourceTree = "<group>";
@@ -169,7 +174,6 @@
 			children = (
 				D62C4E3F2CC4262300394B45 /* AppDelegate.swift */,
 				D62C4E442CC4262300394B45 /* SceneDelegate.swift */,
-				D62C4E412CC4262300394B45 /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -191,6 +195,32 @@
 				D62C4E432CC4262300394B45 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D66B11592CC52C9F0029E065 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D66B115C2CC5471A0029E065 /* Header */,
+				D66B115B2CC52CCD0029E065 /* Rating */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D66B115B2CC52CCD0029E065 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				D62C4E592CC430D800394B45 /* RatingItemView.swift */,
+				D62C4E562CC4298800394B45 /* AppRatingView.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		D66B115C2CC5471A0029E065 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D62C4E3A2CC4262300394B45 /* AppHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,8 +372,10 @@
 			files = (
 				D62C4E462CC4262300394B45 /* UIStackView+.swift in Sources */,
 				D62C4E472CC4262300394B45 /* UIView+.swift in Sources */,
+				D62C4E5A2CC430D800394B45 /* RatingItemView.swift in Sources */,
 				D62C4E482CC4262300394B45 /* UIView+Preview.swift in Sources */,
 				D62C4E492CC4262300394B45 /* UIViewController+Preview.swift in Sources */,
+				D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */,
 				D62C4E4A2CC4262300394B45 /* AppHeaderView.swift in Sources */,
 				D62C4E4B2CC4262300394B45 /* DetailViewController.swift in Sources */,
 				D62C4E4C2CC4262300394B45 /* NicknameDelegate.swift in Sources */,

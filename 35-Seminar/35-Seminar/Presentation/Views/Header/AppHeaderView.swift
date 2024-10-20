@@ -75,7 +75,7 @@ final class AppHeaderView: UIView {
         buttonStackView.configureStackView(axis: .horizontal, distribution: .equalSpacing)
     }
     
-    func setUI() {
+    private func setUI() {
         labelStackView.addArrangedSubviews(titleLabel, subtitleLabel)
         buttonStackView.addArrangedSubviews(openButton, shareButton)
         
@@ -84,7 +84,7 @@ final class AppHeaderView: UIView {
         self.addSubviews(imageView, labelStackView, buttonStackView)
     }
     
-    func setLayout() {
+    private func setLayout() {
         imageView.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.size.equalTo(120)
