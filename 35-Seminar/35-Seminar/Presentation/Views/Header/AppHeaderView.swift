@@ -18,11 +18,10 @@ final class AppHeaderView: UIView {
     private let labelStackView = UIStackView()
     private let buttonStackView = UIStackView()
 
-    
-    init(title: String, subtitle: String) {
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
-        setStyle(title: title, subtitle: subtitle)
+        setStyle()
         setUI()
         setLayout()
     }
@@ -31,20 +30,15 @@ final class AppHeaderView: UIView {
         super.init(coder: coder)
     }
     
-    func setStyle(title: String, subtitle: String) {
-        backgroundColor = .systemBackground
-        
-        imageView.image = UIImage(named: "toss")
+    private func setStyle() {
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 30
         imageView.layer.borderWidth = 1
         imageView.layer.borderColor = UIColor.systemGray4.cgColor
         
-        titleLabel.text = title
         titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
         
-        subtitleLabel.text = subtitle
         subtitleLabel.textColor = .systemGray
         subtitleLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         
@@ -67,7 +61,7 @@ final class AppHeaderView: UIView {
             config.image = UIImage(systemName: "square.and.arrow.up")
             config.preferredSymbolConfigurationForImage = .init(weight: .bold)
             config.baseForegroundColor = .systemBlue
-
+            
             return config
         }()
         
@@ -78,8 +72,6 @@ final class AppHeaderView: UIView {
     private func setUI() {
         labelStackView.addArrangedSubviews(titleLabel, subtitleLabel)
         buttonStackView.addArrangedSubviews(openButton, shareButton)
-        
-        
         
         self.addSubviews(imageView, labelStackView, buttonStackView)
     }
@@ -110,13 +102,22 @@ final class AppHeaderView: UIView {
             $0.trailing.equalToSuperview()
         }
     }
+    
+    func configure(title: String, subtitle: String, image: UIImage?) {
+        titleLabel.text = title
+        subtitleLabel.text = subtitle
+        imageView.image = image
+    }
 }
 
 #if DEBUG
 import SwiftUI
 
 #Preview {
-    AppHeaderView(title: "토스", subtitle: "금융이 쉬워진다").toPreview()
+    let appHeaderView = AppHeaderView()
+    appHeaderView.configure(title: "토스", subtitle: "금융이 쉬워진다", image: UIImage(named: "toss"))
+    
+    return appHeaderView.toPreview()
         .frame(width: UIScreen.main.bounds.width, height: 140)
 }
 #endif
