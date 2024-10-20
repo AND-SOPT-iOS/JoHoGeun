@@ -1,5 +1,5 @@
 //
-//  NewUpdateView.swift
+//  AppNewUpdateView.swift
 //  35-Seminar
 //
 //  Created by 조호근 on 10/20/24.
@@ -8,13 +8,13 @@
 import UIKit
 import SnapKit
 
-protocol NewUpdateViewDelegate: AnyObject {
+protocol AppNewUpdateViewDelegate: AnyObject {
     func versionHistoryButtonTapped()
 }
 
-final class NewUpdateView: UIView {
+final class AppNewUpdateView: UIView {
     
-    weak var delegate: NewUpdateViewDelegate?
+    weak var delegate: AppNewUpdateViewDelegate?
     
     private let titleLabel = UILabel()
     private let versionLabel = UILabel()
@@ -98,7 +98,7 @@ final class NewUpdateView: UIView {
 import SwiftUI
 
 #Preview {
-    NewUpdateView().toPreview()
+    AppNewUpdateView().toPreview()
         .frame(width: UIScreen.main.bounds.width)
 }
 
