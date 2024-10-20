@@ -8,7 +8,13 @@
 import UIKit
 import SnapKit
 
+protocol NewUpdateViewDelegate: AnyObject {
+    func versionHistoryButtonTapped()
+}
+
 final class NewUpdateView: UIView {
+    
+    weak var delegate: NewUpdateViewDelegate?
     
     private let titleLabel = UILabel()
     private let versionLabel = UILabel()
@@ -21,6 +27,7 @@ final class NewUpdateView: UIView {
         setStyle()
         setUI()
         setLayout()
+        setAction()
     }
     
     required init?(coder: NSCoder) {
@@ -76,6 +83,14 @@ final class NewUpdateView: UIView {
             $0.top.equalTo(versionHistoryButton.snp.bottom).offset(8)
             $0.trailing.equalToSuperview()
         }
+    }
+    
+    private func setAction() {
+        let action = UIAction { [weak self] _ in
+            guard let self else { return }
+            self.delegate?.versionHistoryButtonTapped()
+        }
+        versionHistoryButton.addAction(action, for: .touchUpInside)
     }
 }
 

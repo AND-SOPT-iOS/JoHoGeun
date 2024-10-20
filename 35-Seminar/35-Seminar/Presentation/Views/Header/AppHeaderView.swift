@@ -8,7 +8,14 @@
 import UIKit
 import SnapKit
 
+protocol AppHeaderViewDelegate: AnyObject {
+    func openButtonTapped()
+    func shareButtonTapped()
+}
+
 final class AppHeaderView: UIView {
+    
+    weak var delegate: AppHeaderViewDelegate?
     
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
@@ -17,13 +24,14 @@ final class AppHeaderView: UIView {
     private let shareButton = UIButton(configuration: .plain())
     private let labelStackView = UIStackView()
     private let buttonStackView = UIStackView()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setStyle()
         setUI()
         setLayout()
+        setActions()
     }
     
     required init?(coder: NSCoder) {
@@ -101,6 +109,20 @@ final class AppHeaderView: UIView {
             $0.leading.equalTo(labelStackView.snp.leading)
             $0.trailing.equalToSuperview()
         }
+    }
+    
+    private func setActions() {
+        let openButtonAction = UIAction { [weak self] _ in
+            guard let self else { return }
+            self.delegate?.openButtonTapped()
+        }
+        openButton.addAction(openButtonAction, for: .touchUpInside)
+        
+        let shareButtonAction = UIAction { [weak self] _ in
+            guard let self else { return }
+            self.delegate?.shareButtonTapped()
+        }
+        shareButton.addAction(shareButtonAction, for: .touchUpInside)
     }
     
     func configure(title: String, subtitle: String, image: UIImage?) {
