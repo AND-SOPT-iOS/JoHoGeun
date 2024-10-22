@@ -20,6 +20,7 @@ final class AppNewUpdateView: UIView {
     private let versionLabel = UILabel()
     private let updateDateLabel = UILabel()
     private let versionHistoryButton = UIButton()
+    private let descriptionLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,10 +58,17 @@ final class AppNewUpdateView: UIView {
             return config
         }()
         
+        descriptionLabel.text = """
+        • 구석구석 숨어있던 버그들을 잡았어요. 또 다른 버그가 나타나면 토스 고객센터를 찾아주세요. 늘 열려있답니다. 365일 24시간 언제든지요.
+        """
+        descriptionLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        descriptionLabel.lineBreakStrategy = .hangulWordPriority
+        descriptionLabel.numberOfLines = 0
+        
     }
     
     private func setUI() {
-        self.addSubviews(titleLabel, versionHistoryButton, versionLabel, updateDateLabel)
+        self.addSubviews(titleLabel, versionHistoryButton, versionLabel, updateDateLabel, descriptionLabel)
     }
     
     private func setLayout() {
@@ -82,6 +90,11 @@ final class AppNewUpdateView: UIView {
         updateDateLabel.snp.makeConstraints {
             $0.top.equalTo(versionHistoryButton.snp.bottom).offset(8)
             $0.trailing.equalToSuperview()
+        }
+        
+        descriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(versionLabel.snp.bottom).offset(16)
+            $0.leading.trailing.equalToSuperview()
         }
     }
     

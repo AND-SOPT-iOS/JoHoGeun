@@ -25,6 +25,9 @@
 		D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */; };
 		D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11602CC576250029E065 /* AppPreviewView.swift */; };
 		D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */; };
+		D66B11692CC5A0AE0029E065 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11682CC5A0AE0029E065 /* MainViewController.swift */; };
+		D66B116C2CC789A70029E065 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B116B2CC789A70029E065 /* UILabel+.swift */; };
+		D66B116E2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B116D2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNewUpdateView.swift; sourceTree = "<group>"; };
 		D66B11602CC576250029E065 /* AppPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreviewView.swift; sourceTree = "<group>"; };
 		D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoAndDeveloperView.swift; sourceTree = "<group>"; };
+		D66B11682CC5A0AE0029E065 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D66B116B2CC789A70029E065 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		D66B116D2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingAmdReviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -132,6 +138,7 @@
 			children = (
 				D62C4E332CC4262300394B45 /* UIStackView+.swift */,
 				D62C4E342CC4262300394B45 /* UIView+.swift */,
+				D66B116B2CC789A70029E065 /* UILabel+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,6 +164,7 @@
 		D62C4E3E2CC4262300394B45 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D66B116A2CC5A0E60029E065 /* ViewControllers */,
 				D66B11592CC52C9F0029E065 /* Views */,
 				D62C4E542CC4267B00394B45 /* week1 */,
 			);
@@ -210,7 +218,8 @@
 				D66B115B2CC52CCD0029E065 /* Rating */,
 				D66B115F2CC54BB40029E065 /* NewUpdate */,
 				D66B11622CC576520029E065 /* Preview */,
-				D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */,
+				D66B11672CC58C0B0029E065 /* InfoAndDeveloper */,
+				D66B116D2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +255,22 @@
 				D66B11602CC576250029E065 /* AppPreviewView.swift */,
 			);
 			path = Preview;
+			sourceTree = "<group>";
+		};
+		D66B11672CC58C0B0029E065 /* InfoAndDeveloper */ = {
+			isa = PBXGroup;
+			children = (
+				D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */,
+			);
+			path = InfoAndDeveloper;
+			sourceTree = "<group>";
+		};
+		D66B116A2CC5A0E60029E065 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D66B11682CC5A0AE0029E065 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,10 +426,13 @@
 				D62C4E482CC4262300394B45 /* UIView+Preview.swift in Sources */,
 				D62C4E492CC4262300394B45 /* UIViewController+Preview.swift in Sources */,
 				D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */,
+				D66B116C2CC789A70029E065 /* UILabel+.swift in Sources */,
+				D66B11692CC5A0AE0029E065 /* MainViewController.swift in Sources */,
 				D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */,
 				D62C4E4A2CC4262300394B45 /* AppHeaderView.swift in Sources */,
 				D62C4E4B2CC4262300394B45 /* DetailViewController.swift in Sources */,
 				D62C4E4C2CC4262300394B45 /* NicknameDelegate.swift in Sources */,
+				D66B116E2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift in Sources */,
 				D62C4E4D2CC4262300394B45 /* ViewController.swift in Sources */,
 				D62C4E4E2CC4262300394B45 /* AppDelegate.swift in Sources */,
 				D62C4E4F2CC4262300394B45 /* SceneDelegate.swift in Sources */,
