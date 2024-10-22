@@ -100,7 +100,8 @@ final class AppNewUpdateView: UIView {
     
     private func setAction() {
         let action = UIAction { [weak self] _ in
-            guard let self else { return }
+            guard let self = self else { return }
+            
             self.delegate?.versionHistoryButtonTapped()
         }
         versionHistoryButton.addAction(action, for: .touchUpInside)

@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 protocol AppReviewViewDelegate: AnyObject {
+    func starButtonTapped()
     func submitButtonTapped()
 }
 
@@ -19,7 +20,6 @@ final class AppReviewView: UIView {
     private let reviewTitleLabel = UILabel()
     private let starStackView = UIStackView()
     private var starButtons: [UIButton] = []
-    private let toastView = ToastView()
     private let reviewCardView = ReviewCardView()
     private let submitButton = UIButton()
     
@@ -63,7 +63,7 @@ final class AppReviewView: UIView {
             let attributes = AttributeContainer([
                 .font: UIFont.systemFont(ofSize: 16, weight: .medium)
             ])
-            config.attributedTitle = AttributedString("모두 보기", attributes: attributes)
+            config.attributedTitle = AttributedString("리뷰 작성", attributes: attributes)
             config.titleAlignment = .trailing
             
             config.image = UIImage(systemName: "square.and.pencil")
@@ -74,7 +74,7 @@ final class AppReviewView: UIView {
     }
     
     private func setUI() {
-        self.addSubviews(reviewTitleLabel, starStackView, reviewCardView, submitButton, toastView)
+        self.addSubviews(reviewTitleLabel, starStackView, reviewCardView, submitButton)
     }
     
     private func setLayout() {
@@ -91,16 +91,13 @@ final class AppReviewView: UIView {
         reviewCardView.snp.makeConstraints {
             $0.top.equalTo(starStackView.snp.bottom).offset(16)
             $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(150)
         }
         
         submitButton.snp.makeConstraints {
             $0.top.equalTo(reviewCardView.snp.bottom).offset(16)
             $0.leading.equalToSuperview()
-        }
-        
-        toastView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.size.equalTo(200)
+            $0.bottom.lessThanOrEqualToSuperview()
         }
     }
     
@@ -117,8 +114,7 @@ final class AppReviewView: UIView {
                     button.isSelected = index < rating
                 }
                 
-                // 토스트 메시지 표시
-                toastView.show(message: "피드백을 보내주셔서 감사합니다.")
+                self.delegate?.starButtonTapped()
             }
             button.addAction(starButtonAction, for: .touchUpInside)
         }

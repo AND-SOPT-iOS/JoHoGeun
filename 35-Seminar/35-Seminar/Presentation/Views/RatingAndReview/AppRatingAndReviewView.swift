@@ -25,6 +25,7 @@ final class AppRatingAndReviewView: UIView {
         setStyle()
         setUI()
         setLayout()
+        setAction()
     }
     
     required init?(coder: NSCoder) {
@@ -55,6 +56,7 @@ final class AppRatingAndReviewView: UIView {
     private func setLayout() {
         ratingAndReviewLabel.snp.makeConstraints {
             $0.top.leading.equalToSuperview()
+            $0.bottom.lessThanOrEqualToSuperview()
         }
         
         ratingAndReviewButton.snp.makeConstraints {
@@ -77,5 +79,6 @@ import SwiftUI
 
 #Preview {
     AppRatingAndReviewView().toPreview()
+        .frame(height: 100)
 }
 #endif

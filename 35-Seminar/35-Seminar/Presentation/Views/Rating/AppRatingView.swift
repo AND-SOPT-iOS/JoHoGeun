@@ -46,7 +46,8 @@ final class AppRatingView: UIView {
         
         ratingScoreView.snp.makeConstraints {
             $0.top.leading.bottom.equalToSuperview()
-            $0.width.equalTo(itemWidth)
+            $0.width.equalTo(itemWidth).priority(.high)
+            
         }
         
         firstDividerView.snp.makeConstraints {
@@ -59,7 +60,7 @@ final class AppRatingView: UIView {
         awardView.snp.makeConstraints {
             $0.top.bottom.equalToSuperview()
             $0.leading.equalTo(firstDividerView.snp.trailing)
-            $0.width.equalTo(itemWidth)
+            $0.width.equalTo(itemWidth).priority(.high)
         }
         
         secondDividerView.snp.makeConstraints {
@@ -72,7 +73,7 @@ final class AppRatingView: UIView {
         ageRatingView.snp.makeConstraints {
             $0.top.bottom.trailing.equalToSuperview()
             $0.leading.equalTo(secondDividerView.snp.trailing)
-            $0.width.equalTo(itemWidth)
+            $0.width.equalTo(itemWidth).priority(.high)
         }
     }
 }

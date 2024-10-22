@@ -72,6 +72,7 @@ final class AppPreviewView: UIView {
         supportedDeviceLabel.snp.makeConstraints {
             $0.centerY.equalTo(supportedDeviceImageView)
             $0.leading.equalTo(supportedDeviceImageView.snp.trailing).offset(8)
+            $0.bottom.lessThanOrEqualToSuperview().offset(-8)
         }
     }
 }

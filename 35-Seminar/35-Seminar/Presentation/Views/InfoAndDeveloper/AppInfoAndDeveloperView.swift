@@ -20,7 +20,7 @@ final class AppInfoAndDeveloperView: UIView {
     private var moreButton: UIButton?
     private let developerButton = UIButton()
     
-    private let fullDescription = "토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비 토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비 토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비"
+    private let fullDescription = "토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비 토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비 토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비 토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비 토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비 토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비 토스뱅크, 토스증권 서비스를 이용하시려면 토스 앱 설치가 필요합니다. 내 금융 현황을 한눈에, 홈소비"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -102,6 +102,7 @@ final class AppInfoAndDeveloperView: UIView {
         developerButton.snp.makeConstraints {
             $0.top.equalTo(descriptionLabel.snp.bottom)
             $0.leading.trailing.equalToSuperview()
+            $0.bottom.lessThanOrEqualToSuperview()
         }
     }
     
@@ -115,6 +116,7 @@ final class AppInfoAndDeveloperView: UIView {
             developerButton.snp.remakeConstraints {
                 $0.top.equalTo(moreButton.snp.bottom)
                 $0.leading.trailing.equalToSuperview()
+                $0.bottom.lessThanOrEqualToSuperview()
             }
         }
     }
