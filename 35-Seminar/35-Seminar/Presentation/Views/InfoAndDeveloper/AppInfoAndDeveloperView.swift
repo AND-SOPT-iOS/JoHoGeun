@@ -128,7 +128,6 @@ final class AppInfoAndDeveloperView: UIView {
                 
                 UIView.transition(with: self, duration: 0.3, options: .transitionCrossDissolve) {
                     self.descriptionLabel.numberOfLines = 0
-                } completion: { _ in
                     moreButton.isHidden = true
                 }
             }
