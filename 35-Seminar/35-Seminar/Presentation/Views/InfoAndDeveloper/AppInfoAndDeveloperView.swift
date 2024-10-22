@@ -126,9 +126,11 @@ final class AppInfoAndDeveloperView: UIView {
             let moreButtonAction = UIAction { [weak self] _ in
                 guard let self = self else { return }
                 
-                self.descriptionLabel.numberOfLines = 0
-                moreButton.isHidden = true
-                self.setNeedsLayout()
+                UIView.transition(with: self, duration: 0.3, options: .transitionCrossDissolve) {
+                    self.descriptionLabel.numberOfLines = 0
+                } completion: { _ in
+                    moreButton.isHidden = true
+                }
             }
             moreButton.addAction(moreButtonAction, for: .touchUpInside)
         }
