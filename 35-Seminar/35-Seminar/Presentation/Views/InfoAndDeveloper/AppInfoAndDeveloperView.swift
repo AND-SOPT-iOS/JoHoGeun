@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol AppInfoAndDeveloperViewDelegate: AnyObject {
     func developerButtonTapped()

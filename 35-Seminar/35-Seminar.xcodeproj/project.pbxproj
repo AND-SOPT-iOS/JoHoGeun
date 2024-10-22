@@ -27,7 +27,12 @@
 		D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */; };
 		D66B11692CC5A0AE0029E065 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11682CC5A0AE0029E065 /* MainViewController.swift */; };
 		D66B116C2CC789A70029E065 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B116B2CC789A70029E065 /* UILabel+.swift */; };
-		D66B116E2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B116D2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift */; };
+		D66B116E2CC7BD0F0029E065 /* AppRatingAndReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B116D2CC7BD0F0029E065 /* AppRatingAndReviewView.swift */; };
+		D66B11712CC7E8870029E065 /* AppReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11702CC7E8870029E065 /* AppReviewView.swift */; };
+		D66B11742CC7EBA90029E065 /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11732CC7EBA90029E065 /* ReviewCardView.swift */; };
+		D66B11772CC7EED30029E065 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11762CC7EED30029E065 /* Review.swift */; };
+		D66B11792CC7F6330029E065 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11782CC7F6330029E065 /* Date.swift */; };
+		D66B117B2CC7F9400029E065 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B117A2CC7F9400029E065 /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +76,12 @@
 		D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoAndDeveloperView.swift; sourceTree = "<group>"; };
 		D66B11682CC5A0AE0029E065 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D66B116B2CC789A70029E065 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
-		D66B116D2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingAmdReviewView.swift; sourceTree = "<group>"; };
+		D66B116D2CC7BD0F0029E065 /* AppRatingAndReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingAndReviewView.swift; sourceTree = "<group>"; };
+		D66B11702CC7E8870029E065 /* AppReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewView.swift; sourceTree = "<group>"; };
+		D66B11732CC7EBA90029E065 /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
+		D66B11762CC7EED30029E065 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		D66B11782CC7F6330029E065 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		D66B117A2CC7F9400029E065 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -139,6 +149,7 @@
 				D62C4E332CC4262300394B45 /* UIStackView+.swift */,
 				D62C4E342CC4262300394B45 /* UIView+.swift */,
 				D66B116B2CC789A70029E065 /* UILabel+.swift */,
+				D66B11782CC7F6330029E065 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				D62C4E532CC4262F00394B45 /* Application */,
+				D66B11752CC7EEB20029E065 /* Entity */,
 				D62C4E392CC4262300394B45 /* Util */,
 				D62C4E3E2CC4262300394B45 /* Presentation */,
 				D62C4E552CC426AB00394B45 /* Resources */,
@@ -219,7 +231,8 @@
 				D66B115F2CC54BB40029E065 /* NewUpdate */,
 				D66B11622CC576520029E065 /* Preview */,
 				D66B11672CC58C0B0029E065 /* InfoAndDeveloper */,
-				D66B116D2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift */,
+				D66B116F2CC7BDBD0029E065 /* RatingAndReview */,
+				D66B11722CC7E88D0029E065 /* Review */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +284,32 @@
 				D66B11682CC5A0AE0029E065 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D66B116F2CC7BDBD0029E065 /* RatingAndReview */ = {
+			isa = PBXGroup;
+			children = (
+				D66B116D2CC7BD0F0029E065 /* AppRatingAndReviewView.swift */,
+			);
+			path = RatingAndReview;
+			sourceTree = "<group>";
+		};
+		D66B11722CC7E88D0029E065 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				D66B11732CC7EBA90029E065 /* ReviewCardView.swift */,
+				D66B117A2CC7F9400029E065 /* ToastView.swift */,
+				D66B11702CC7E8870029E065 /* AppReviewView.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		D66B11752CC7EEB20029E065 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D66B11762CC7EED30029E065 /* Review.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,7 +461,10 @@
 			files = (
 				D62C4E462CC4262300394B45 /* UIStackView+.swift in Sources */,
 				D62C4E472CC4262300394B45 /* UIView+.swift in Sources */,
+				D66B11772CC7EED30029E065 /* Review.swift in Sources */,
+				D66B11742CC7EBA90029E065 /* ReviewCardView.swift in Sources */,
 				D62C4E5A2CC430D800394B45 /* RatingItemView.swift in Sources */,
+				D66B117B2CC7F9400029E065 /* ToastView.swift in Sources */,
 				D62C4E482CC4262300394B45 /* UIView+Preview.swift in Sources */,
 				D62C4E492CC4262300394B45 /* UIViewController+Preview.swift in Sources */,
 				D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */,
@@ -432,10 +474,12 @@
 				D62C4E4A2CC4262300394B45 /* AppHeaderView.swift in Sources */,
 				D62C4E4B2CC4262300394B45 /* DetailViewController.swift in Sources */,
 				D62C4E4C2CC4262300394B45 /* NicknameDelegate.swift in Sources */,
-				D66B116E2CC7BD0F0029E065 /* AppRatingAmdReviewView.swift in Sources */,
+				D66B116E2CC7BD0F0029E065 /* AppRatingAndReviewView.swift in Sources */,
+				D66B11712CC7E8870029E065 /* AppReviewView.swift in Sources */,
 				D62C4E4D2CC4262300394B45 /* ViewController.swift in Sources */,
 				D62C4E4E2CC4262300394B45 /* AppDelegate.swift in Sources */,
 				D62C4E4F2CC4262300394B45 /* SceneDelegate.swift in Sources */,
+				D66B11792CC7F6330029E065 /* Date.swift in Sources */,
 				D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */,
 				D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */,
 			);
