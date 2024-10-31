@@ -177,8 +177,7 @@
 		D62C4E3E2CC4262300394B45 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D66B116A2CC5A0E60029E065 /* ViewControllers */,
-				D66B11592CC52C9F0029E065 /* Views */,
+				D6642F4E2CD3B223008218DA /* TossDetail */,
 				D62C4E542CC4267B00394B45 /* week1 */,
 			);
 			path = Presentation;
@@ -223,6 +222,15 @@
 				D62C4E432CC4262300394B45 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6642F4E2CD3B223008218DA /* TossDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D66B116A2CC5A0E60029E065 /* ViewControllers */,
+				D66B11592CC52C9F0029E065 /* Views */,
+			);
+			path = TossDetail;
 			sourceTree = "<group>";
 		};
 		D66B11592CC52C9F0029E065 /* Views */ = {
