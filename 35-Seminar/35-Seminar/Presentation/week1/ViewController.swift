@@ -37,12 +37,12 @@ class ViewController: UIViewController {
         return label
     }()
     
-    private lazy var nextButton: UIButton = {
+    private let nextButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 100, y: 500, width: 100, height: 50))
         button.setTitle("다음", for: .normal)
         button.backgroundColor = .tintColor
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        
         return button
     }()
     
@@ -75,6 +75,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         
         setUI()
         setLayout()
