@@ -33,14 +33,14 @@ extension AppItem {
             title: "Bugs",
             subtitle: "음악이 필요한 순간, 벅스",
             appImage: "bugs",
-            downloadState: .download
+            downloadState: .paid(price: 8800)
         ),
         AppItem(
             rank: 3,
             title: "BunZang",
             subtitle: "당신의 빈 공간을 공유하세요",
             appImage: "bunznag",
-            downloadState: .download
+            downloadState: .paid(price: 14000)
         ),
         AppItem(
             rank: 4,
