@@ -22,6 +22,10 @@
 		D62C4E522CC4262300394B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62C4E432CC4262300394B45 /* LaunchScreen.storyboard */; };
 		D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C4E562CC4298800394B45 /* AppRatingView.swift */; };
 		D62C4E5A2CC430D800394B45 /* RatingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C4E592CC430D800394B45 /* RatingItemView.swift */; };
+		D6642F502CD3E6EE008218DA /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F4F2CD3E6EE008218DA /* Banner.swift */; };
+		D6642F522CD3F152008218DA /* DownloadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F512CD3F152008218DA /* DownloadState.swift */; };
+		D6642F562CD3F69B008218DA /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F552CD3F69B008218DA /* Int+.swift */; };
+		D6642F582CD3F830008218DA /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F572CD3F830008218DA /* AppItem.swift */; };
 		D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */; };
 		D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11602CC576250029E065 /* AppPreviewView.swift */; };
 		D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */; };
@@ -72,6 +76,10 @@
 		D62C4E442CC4262300394B45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D62C4E562CC4298800394B45 /* AppRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingView.swift; sourceTree = "<group>"; };
 		D62C4E592CC430D800394B45 /* RatingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingItemView.swift; sourceTree = "<group>"; };
+		D6642F4F2CD3E6EE008218DA /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		D6642F512CD3F152008218DA /* DownloadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadState.swift; sourceTree = "<group>"; };
+		D6642F552CD3F69B008218DA /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		D6642F572CD3F830008218DA /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
 		D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNewUpdateView.swift; sourceTree = "<group>"; };
 		D66B11602CC576250029E065 /* AppPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreviewView.swift; sourceTree = "<group>"; };
 		D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoAndDeveloperView.swift; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 				D62C4E342CC4262300394B45 /* UIView+.swift */,
 				D66B116B2CC789A70029E065 /* UILabel+.swift */,
 				D66B11782CC7F6330029E065 /* Date.swift */,
+				D6642F552CD3F69B008218DA /* Int+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +328,9 @@
 			isa = PBXGroup;
 			children = (
 				D66B11762CC7EED30029E065 /* Review.swift */,
+				D6642F512CD3F152008218DA /* DownloadState.swift */,
+				D6642F4F2CD3E6EE008218DA /* Banner.swift */,
+				D6642F572CD3F830008218DA /* AppItem.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -471,9 +483,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62C4E462CC4262300394B45 /* UIStackView+.swift in Sources */,
+				D6642F522CD3F152008218DA /* DownloadState.swift in Sources */,
 				D62C4E472CC4262300394B45 /* UIView+.swift in Sources */,
 				D66B11772CC7EED30029E065 /* Review.swift in Sources */,
 				D66B117F2CC824820029E065 /* AppDetailViewController.swift in Sources */,
+				D6642F562CD3F69B008218DA /* Int+.swift in Sources */,
 				D66B11742CC7EBA90029E065 /* ReviewCardView.swift in Sources */,
 				D62C4E5A2CC430D800394B45 /* RatingItemView.swift in Sources */,
 				D66B117B2CC7F9400029E065 /* ToastView.swift in Sources */,
@@ -484,6 +498,7 @@
 				D66B11692CC5A0AE0029E065 /* AppMainViewController.swift in Sources */,
 				D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */,
 				D62C4E4A2CC4262300394B45 /* AppHeaderView.swift in Sources */,
+				D6642F582CD3F830008218DA /* AppItem.swift in Sources */,
 				D62C4E4B2CC4262300394B45 /* DetailViewController.swift in Sources */,
 				D62C4E4C2CC4262300394B45 /* NicknameDelegate.swift in Sources */,
 				D66B116E2CC7BD0F0029E065 /* AppRatingAndReviewView.swift in Sources */,
@@ -492,6 +507,7 @@
 				D62C4E4E2CC4262300394B45 /* AppDelegate.swift in Sources */,
 				D62C4E4F2CC4262300394B45 /* SceneDelegate.swift in Sources */,
 				D66B11792CC7F6330029E065 /* Date.swift in Sources */,
+				D6642F502CD3E6EE008218DA /* Banner.swift in Sources */,
 				D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */,
 				D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */,
 			);
