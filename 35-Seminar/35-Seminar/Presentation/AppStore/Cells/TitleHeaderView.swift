@@ -19,6 +19,12 @@ final class TitleHeaderView: UICollectionReusableView {
     weak var delegate: TitleHeaderViewDelegate?
     private var section: Int?
     
+    private let separatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .separator
+        return view
+    }()
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 22, weight: .bold)
@@ -60,6 +66,7 @@ final class TitleHeaderView: UICollectionReusableView {
     
     private func setUI() {
         self.addSubviews(
+            separatorView,
             titleLabel,
             subtitleLabel,
             moreButton
@@ -67,8 +74,14 @@ final class TitleHeaderView: UICollectionReusableView {
     }
     
     private func setLayout() {
+        separatorView.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+            $0.height.equalTo(1)
+        }
+        
         titleLabel.snp.makeConstraints {
-            $0.top.leading.equalToSuperview()
+            $0.top.equalTo(separatorView.snp.bottom).offset(16)
+            $0.leading.equalToSuperview()
         }
         
         subtitleLabel.snp.makeConstraints {
@@ -77,7 +90,7 @@ final class TitleHeaderView: UICollectionReusableView {
         }
         
         moreButton.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
+            $0.top.equalTo(titleLabel.snp.top)
             $0.trailing.equalToSuperview().inset(4)
         }
     }

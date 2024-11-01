@@ -96,7 +96,9 @@ final class AppStoreDataSource {
                 withReuseIdentifier: BannerCollectionViewCell.identifier,
                 for: indexPath
             ) as? BannerCollectionViewCell else { return UICollectionViewCell() }
+            
             cell.configure(with: banner)
+            
             return cell
             
         case .app(let appItem):
@@ -104,9 +106,17 @@ final class AppStoreDataSource {
                 withReuseIdentifier: AppItemCollectionViewCell.identifier,
                 for: indexPath
             ) as? AppItemCollectionViewCell else { return UICollectionViewCell() }
+            
             let section = Section(rawValue: indexPath.section)
             let isRankVisible = section?.isRankingSection ?? false
-            cell.configure(with: appItem, isRankVisible: isRankVisible)
+            let isLastCell = indexPath.item % 3 == 2
+            
+            cell.configure(
+                with: appItem,
+                isRankVisible: isRankVisible,
+                isLastCell: isLastCell
+            )
+            
             return cell
         }
     }

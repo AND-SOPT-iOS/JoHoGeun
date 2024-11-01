@@ -12,6 +12,12 @@ class AppItemCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "AppItemCollectionViewCell"
     
+    private let separatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .separator
+        return view
+    }()
+    
     private let appImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
@@ -88,7 +94,8 @@ class AppItemCollectionViewCell: UICollectionViewCell {
             titleLabel,
             subtitleLabel,
             downloadButton,
-            inAppPurchaseLabel
+            inAppPurchaseLabel,
+            separatorView
         )
     }
     
@@ -126,10 +133,21 @@ class AppItemCollectionViewCell: UICollectionViewCell {
             $0.top.equalTo(downloadButton.snp.bottom).offset(4)
             $0.centerX.equalTo(downloadButton)
         }
+        
+        separatorView.snp.makeConstraints {
+            $0.leading.equalTo(rankLabel.snp.leading)
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+            $0.height.equalTo(0.5)
+        }
     }
     
     
-    func configure(with item: AppItem, isRankVisible: Bool = true) {
+    func configure(
+        with item: AppItem,
+        isRankVisible: Bool = true,
+        isLastCell: Bool = false
+    ) {
         rankLabel.isHidden = !isRankVisible
         if isRankVisible {
             rankLabel.text = "\(item.rank)"
@@ -152,6 +170,8 @@ class AppItemCollectionViewCell: UICollectionViewCell {
         case .paid(let price):
             downloadButton.setTitle("₩\(price.formattedWithComma)", for: .normal)
         }
+        
+        separatorView.isHidden = isLastCell
     }
     
 }

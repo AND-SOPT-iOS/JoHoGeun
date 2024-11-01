@@ -115,15 +115,6 @@ private extension AppStoreViewController {
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        switch section {
-        case .essential:
-            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 12, trailing: 0)
-        case .paid, .free:
-            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0)
-        case .banner:
-            break
-        }
-        
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.93),
             heightDimension: .estimated(260)
@@ -140,9 +131,9 @@ private extension AppStoreViewController {
         
         switch section {
         case .essential:
-            layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 20, bottom: 40, trailing: 20)
+            layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 24, leading: 20, bottom: 20, trailing: 20)
         case .paid, .free:
-            layoutSection.contentInsets = NSDirectionalEdgeInsets(top: -12, leading: 20, bottom: 40, trailing: 20)
+            layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 20, bottom: 20, trailing: 20)
         case .banner:
             layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 40, trailing: 20)
         }
