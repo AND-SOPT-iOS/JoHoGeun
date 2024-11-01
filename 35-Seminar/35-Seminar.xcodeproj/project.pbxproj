@@ -31,6 +31,8 @@
 		D6642F632CD483B1008218DA /* AppStoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F622CD483B1008218DA /* AppStoreDataSource.swift */; };
 		D6642F652CD48CF8008218DA /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F642CD48CF8008218DA /* TitleHeaderView.swift */; };
 		D6642F672CD49892008218DA /* AppStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F662CD49892008218DA /* AppStoreViewController.swift */; };
+		D6642F6F2CD4C649008218DA /* AppChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F6E2CD4C649008218DA /* AppChartViewController.swift */; };
+		D6642F742CD4C8CE008218DA /* AppChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F732CD4C8CE008218DA /* AppChartTableViewCell.swift */; };
 		D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */; };
 		D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11602CC576250029E065 /* AppPreviewView.swift */; };
 		D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */; };
@@ -90,6 +92,8 @@
 		D6642F622CD483B1008218DA /* AppStoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreDataSource.swift; sourceTree = "<group>"; };
 		D6642F642CD48CF8008218DA /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
 		D6642F662CD49892008218DA /* AppStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreViewController.swift; sourceTree = "<group>"; };
+		D6642F6E2CD4C649008218DA /* AppChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChartViewController.swift; sourceTree = "<group>"; };
+		D6642F732CD4C8CE008218DA /* AppChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChartTableViewCell.swift; sourceTree = "<group>"; };
 		D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNewUpdateView.swift; sourceTree = "<group>"; };
 		D66B11602CC576250029E065 /* AppPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreviewView.swift; sourceTree = "<group>"; };
 		D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoAndDeveloperView.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				D6642F5A2CD4047F008218DA /* Cells */,
 				D6642F612CD4838A008218DA /* DataSources */,
 				D6642F662CD49892008218DA /* AppStoreViewController.swift */,
+				D6642F6E2CD4C649008218DA /* AppChartViewController.swift */,
 			);
 			path = AppStore;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			children = (
 				D6642F642CD48CF8008218DA /* TitleHeaderView.swift */,
 				D6642F5B2CD40504008218DA /* AppItemCollectionViewCell.swift */,
+				D6642F732CD4C8CE008218DA /* AppChartTableViewCell.swift */,
 				D6642F5F2CD41B44008218DA /* BannerCollectionViewCell.swift */,
 			);
 			path = Cells;
@@ -536,9 +542,11 @@
 				D66B116C2CC789A70029E065 /* UILabel+.swift in Sources */,
 				D66B11692CC5A0AE0029E065 /* AppMainViewController.swift in Sources */,
 				D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */,
+				D6642F6F2CD4C649008218DA /* AppChartViewController.swift in Sources */,
 				D62C4E4A2CC4262300394B45 /* AppHeaderView.swift in Sources */,
 				D6642F582CD3F830008218DA /* AppItem.swift in Sources */,
 				D62C4E4B2CC4262300394B45 /* DetailViewController.swift in Sources */,
+				D6642F742CD4C8CE008218DA /* AppChartTableViewCell.swift in Sources */,
 				D6642F602CD41B44008218DA /* BannerCollectionViewCell.swift in Sources */,
 				D6642F672CD49892008218DA /* AppStoreViewController.swift in Sources */,
 				D62C4E4C2CC4262300394B45 /* NicknameDelegate.swift in Sources */,

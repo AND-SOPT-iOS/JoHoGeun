@@ -21,7 +21,7 @@ final class AppStoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
         setUI()
         setLayout()
         setDataSource()
@@ -48,19 +48,22 @@ extension AppStoreViewController: TitleHeaderViewDelegate {
     
     func moreButtonTapped(in section: Int) {
         guard let section = AppStoreDataSource.Section(rawValue: section) else { return }
-        let detailVC = AppDetailViewController()
+        let chartVC = AppChartViewController()
         
         switch section {
         case .banner: break
         case .essential:
-            detailVC.configure(title: "필수 금융앱")
+            chartVC.title = "필수 금융앱"
+            chartVC.configure(with: AppItem.sampleEssentialDatas)
         case .paid:
-            detailVC.configure(title: "유료 앱 순위")
+            chartVC.title = "유료 앱 순위"
+            chartVC.configure(with: AppItem.samplePaidDatas)
         case .free:
-            detailVC.configure(title: "무료 앱 순위")
+            chartVC.title = "무료 앱 순위"
+            chartVC.configure(with: AppItem.sampleFreeDatas)
         }
         
-        navigationController?.pushViewController(detailVC, animated: true)
+        navigationController?.pushViewController(chartVC, animated: true)
     }
     
 }

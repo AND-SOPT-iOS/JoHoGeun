@@ -1,5 +1,5 @@
 //
-//  AppItemCollectionViewCell.swift
+//  AppChartTableViewCell.swift
 //  35-Seminar
 //
 //  Created by 조호근 on 11/1/24.
@@ -8,9 +8,9 @@
 import UIKit
 import SnapKit
 
-class AppItemCollectionViewCell: UICollectionViewCell {
+class AppChartTableViewCell: UITableViewCell {
     
-    static let identifier = "AppItemCollectionViewCell"
+    static let identifier = "AppChartTableViewCell"
     
     private let appImageView: UIImageView = {
         let image = UIImageView()
@@ -71,8 +71,8 @@ class AppItemCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUI()
         setLayout()
     }
@@ -95,7 +95,7 @@ class AppItemCollectionViewCell: UICollectionViewCell {
     private func setLayout() {
         appImageView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview()
+            $0.leading.equalToSuperview().inset(16)
             $0.size.equalTo(60)
         }
         
@@ -160,7 +160,7 @@ class AppItemCollectionViewCell: UICollectionViewCell {
 import SwiftUI
 
 #Preview("Example0") {
-    let cell = AppItemCollectionViewCell()
+    let cell = AppChartTableViewCell()
     cell.configure(with: AppItem.sampleEssentialDatas[0])
     
     return cell.toPreview()
@@ -168,7 +168,7 @@ import SwiftUI
 }
 
 #Preview("Example1") {
-    let cell = AppItemCollectionViewCell()
+    let cell = AppChartTableViewCell()
     cell.configure(with: AppItem.sampleEssentialDatas[1])
     
     return cell.toPreview()
