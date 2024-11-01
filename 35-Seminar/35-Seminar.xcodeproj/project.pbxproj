@@ -33,6 +33,7 @@
 		D6642F672CD49892008218DA /* AppStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F662CD49892008218DA /* AppStoreViewController.swift */; };
 		D6642F6F2CD4C649008218DA /* AppChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F6E2CD4C649008218DA /* AppChartViewController.swift */; };
 		D6642F742CD4C8CE008218DA /* AppChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F732CD4C8CE008218DA /* AppChartTableViewCell.swift */; };
+		D6642F782CD4D570008218DA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F772CD4D570008218DA /* MainTabBarController.swift */; };
 		D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */; };
 		D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11602CC576250029E065 /* AppPreviewView.swift */; };
 		D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */; };
@@ -94,6 +95,7 @@
 		D6642F662CD49892008218DA /* AppStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreViewController.swift; sourceTree = "<group>"; };
 		D6642F6E2CD4C649008218DA /* AppChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChartViewController.swift; sourceTree = "<group>"; };
 		D6642F732CD4C8CE008218DA /* AppChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChartTableViewCell.swift; sourceTree = "<group>"; };
+		D6642F772CD4D570008218DA /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNewUpdateView.swift; sourceTree = "<group>"; };
 		D66B11602CC576250029E065 /* AppPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreviewView.swift; sourceTree = "<group>"; };
 		D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoAndDeveloperView.swift; sourceTree = "<group>"; };
@@ -260,10 +262,10 @@
 		D6642F592CD40472008218DA /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
-				D6642F5A2CD4047F008218DA /* Cells */,
+				D6642F792CD4D841008218DA /* Common */,
+				D6642F752CD4D36B008218DA /* ViewControllers */,
 				D6642F612CD4838A008218DA /* DataSources */,
-				D6642F662CD49892008218DA /* AppStoreViewController.swift */,
-				D6642F6E2CD4C649008218DA /* AppChartViewController.swift */,
+				D6642F5A2CD4047F008218DA /* Cells */,
 			);
 			path = AppStore;
 			sourceTree = "<group>";
@@ -285,6 +287,23 @@
 				D6642F622CD483B1008218DA /* AppStoreDataSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		D6642F752CD4D36B008218DA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6642F662CD49892008218DA /* AppStoreViewController.swift */,
+				D6642F6E2CD4C649008218DA /* AppChartViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D6642F792CD4D841008218DA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D6642F772CD4D570008218DA /* MainTabBarController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D66B11592CC52C9F0029E065 /* Views */ = {
@@ -529,6 +548,7 @@
 			files = (
 				D62C4E462CC4262300394B45 /* UIStackView+.swift in Sources */,
 				D6642F522CD3F152008218DA /* DownloadState.swift in Sources */,
+				D6642F782CD4D570008218DA /* MainTabBarController.swift in Sources */,
 				D62C4E472CC4262300394B45 /* UIView+.swift in Sources */,
 				D66B11772CC7EED30029E065 /* Review.swift in Sources */,
 				D66B117F2CC824820029E065 /* AppDetailViewController.swift in Sources */,
