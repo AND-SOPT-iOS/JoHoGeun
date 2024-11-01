@@ -28,6 +28,9 @@
 		D6642F582CD3F830008218DA /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F572CD3F830008218DA /* AppItem.swift */; };
 		D6642F5C2CD40504008218DA /* AppItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F5B2CD40504008218DA /* AppItemCollectionViewCell.swift */; };
 		D6642F602CD41B44008218DA /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F5F2CD41B44008218DA /* BannerCollectionViewCell.swift */; };
+		D6642F632CD483B1008218DA /* AppStoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F622CD483B1008218DA /* AppStoreDataSource.swift */; };
+		D6642F652CD48CF8008218DA /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F642CD48CF8008218DA /* TitleHeaderView.swift */; };
+		D6642F672CD49892008218DA /* AppStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F662CD49892008218DA /* AppStoreViewController.swift */; };
 		D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */; };
 		D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11602CC576250029E065 /* AppPreviewView.swift */; };
 		D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */; };
@@ -84,6 +87,9 @@
 		D6642F572CD3F830008218DA /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
 		D6642F5B2CD40504008218DA /* AppItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6642F5F2CD41B44008218DA /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6642F622CD483B1008218DA /* AppStoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreDataSource.swift; sourceTree = "<group>"; };
+		D6642F642CD48CF8008218DA /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
+		D6642F662CD49892008218DA /* AppStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreViewController.swift; sourceTree = "<group>"; };
 		D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNewUpdateView.swift; sourceTree = "<group>"; };
 		D66B11602CC576250029E065 /* AppPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreviewView.swift; sourceTree = "<group>"; };
 		D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoAndDeveloperView.swift; sourceTree = "<group>"; };
@@ -251,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				D6642F5A2CD4047F008218DA /* Cells */,
+				D6642F612CD4838A008218DA /* DataSources */,
+				D6642F662CD49892008218DA /* AppStoreViewController.swift */,
 			);
 			path = AppStore;
 			sourceTree = "<group>";
@@ -258,10 +266,19 @@
 		D6642F5A2CD4047F008218DA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D6642F642CD48CF8008218DA /* TitleHeaderView.swift */,
 				D6642F5B2CD40504008218DA /* AppItemCollectionViewCell.swift */,
 				D6642F5F2CD41B44008218DA /* BannerCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D6642F612CD4838A008218DA /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				D6642F622CD483B1008218DA /* AppStoreDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		D66B11592CC52C9F0029E065 /* Views */ = {
@@ -523,9 +540,12 @@
 				D6642F582CD3F830008218DA /* AppItem.swift in Sources */,
 				D62C4E4B2CC4262300394B45 /* DetailViewController.swift in Sources */,
 				D6642F602CD41B44008218DA /* BannerCollectionViewCell.swift in Sources */,
+				D6642F672CD49892008218DA /* AppStoreViewController.swift in Sources */,
 				D62C4E4C2CC4262300394B45 /* NicknameDelegate.swift in Sources */,
 				D66B116E2CC7BD0F0029E065 /* AppRatingAndReviewView.swift in Sources */,
 				D6642F5C2CD40504008218DA /* AppItemCollectionViewCell.swift in Sources */,
+				D6642F652CD48CF8008218DA /* TitleHeaderView.swift in Sources */,
+				D6642F632CD483B1008218DA /* AppStoreDataSource.swift in Sources */,
 				D66B11712CC7E8870029E065 /* AppReviewView.swift in Sources */,
 				D62C4E4D2CC4262300394B45 /* ViewController.swift in Sources */,
 				D62C4E4E2CC4262300394B45 /* AppDelegate.swift in Sources */,

@@ -159,7 +159,7 @@ import SwiftUI
 
 #Preview("Example0") {
     let cell = AppItemCollectionViewCell()
-    cell.configure(with: AppItem.sampleData[0])
+    cell.configure(with: AppItem.sampleEssentialDatas[0])
     
     return cell.toPreview()
         .frame(width: UIScreen.main.bounds.width, height: 80)
@@ -167,7 +167,7 @@ import SwiftUI
 
 #Preview("Example1") {
     let cell = AppItemCollectionViewCell()
-    cell.configure(with: AppItem.sampleData[1])
+    cell.configure(with: AppItem.sampleEssentialDatas[1])
     
     return cell.toPreview()
         .frame(width: UIScreen.main.bounds.width, height: 80)
