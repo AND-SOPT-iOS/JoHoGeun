@@ -52,6 +52,17 @@
 		D6EAD3452CD6092C001EFA45 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD3442CD6092C001EFA45 /* RegisterRequest.swift */; };
 		D6EAD3472CD60949001EFA45 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD3462CD60949001EFA45 /* UserService.swift */; };
 		D6EAD34C2CD60DDB001EFA45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD34B2CD60DDB001EFA45 /* LoginViewController.swift */; };
+		D6EAD41B2CDD1861001EFA45 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD41A2CDD1861001EFA45 /* UserAPI.swift */; };
+		D6EAD41D2CDD1D2C001EFA45 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD41C2CDD1D2C001EFA45 /* LoginRequest.swift */; };
+		D6EAD4212CDD3219001EFA45 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4202CDD3219001EFA45 /* RegisterResponse.swift */; };
+		D6EAD4242CDD4053001EFA45 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4232CDD4053001EFA45 /* Encodable+.swift */; };
+		D6EAD4282CDD4CA0001EFA45 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4272CDD4CA0001EFA45 /* LoginResponse.swift */; };
+		D6EAD42C2CDD4D35001EFA45 /* MyHobbyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD42B2CDD4D35001EFA45 /* MyHobbyResponse.swift */; };
+		D6EAD42E2CDD5591001EFA45 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD42D2CDD5591001EFA45 /* KeychainManager.swift */; };
+		D6EAD4312CDD55E4001EFA45 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4302CDD55E4001EFA45 /* TokenManager.swift */; };
+		D6EAD4332CDD57A7001EFA45 /* UpdateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4322CDD57A7001EFA45 /* UpdateUserRequest.swift */; };
+		D6EAD4352CDD5E90001EFA45 /* UpdateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4342CDD5E90001EFA45 /* UpdateUserResponse.swift */; };
+		D6EAD4372CDD6418001EFA45 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4362CDD6418001EFA45 /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +131,17 @@
 		D6EAD3442CD6092C001EFA45 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		D6EAD3462CD60949001EFA45 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D6EAD34B2CD60DDB001EFA45 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6EAD41A2CDD1861001EFA45 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		D6EAD41C2CDD1D2C001EFA45 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		D6EAD4202CDD3219001EFA45 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		D6EAD4232CDD4053001EFA45 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
+		D6EAD4272CDD4CA0001EFA45 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		D6EAD42B2CDD4D35001EFA45 /* MyHobbyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHobbyResponse.swift; sourceTree = "<group>"; };
+		D6EAD42D2CDD5591001EFA45 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		D6EAD4302CDD55E4001EFA45 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		D6EAD4322CDD57A7001EFA45 /* UpdateUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRequest.swift; sourceTree = "<group>"; };
+		D6EAD4342CDD5E90001EFA45 /* UpdateUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserResponse.swift; sourceTree = "<group>"; };
+		D6EAD4362CDD6418001EFA45 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -417,9 +439,10 @@
 		D6EAD3482CD60A88001EFA45 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D6EAD42F2CDD5597001EFA45 /* Auth */,
 				D6EAD3492CD60BF6001EFA45 /* Network */,
 				D6EAD3402CD608F5001EFA45 /* Environment.swift */,
-				D6EAD3442CD6092C001EFA45 /* RegisterRequest.swift */,
+				D6EAD41E2CDD1D68001EFA45 /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -427,8 +450,10 @@
 		D6EAD3492CD60BF6001EFA45 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D6EAD4252CDD405A001EFA45 /* Extension */,
+				D6EAD4262CDD427C001EFA45 /* Error */,
+				D6EAD41A2CDD1861001EFA45 /* UserAPI.swift */,
 				D6EAD3462CD60949001EFA45 /* UserService.swift */,
-				D6EAD3422CD60905001EFA45 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -440,6 +465,62 @@
 				D6642F4E2CD3B223008218DA /* TossDetail */,
 			);
 			path = week23;
+			sourceTree = "<group>";
+		};
+		D6EAD41E2CDD1D68001EFA45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6EAD41F2CDD1EE0001EFA45 /* RequestDTO */,
+				D6EAD4222CDD3392001EFA45 /* ResponseDTO */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6EAD41F2CDD1EE0001EFA45 /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				D6EAD3442CD6092C001EFA45 /* RegisterRequest.swift */,
+				D6EAD41C2CDD1D2C001EFA45 /* LoginRequest.swift */,
+				D6EAD4322CDD57A7001EFA45 /* UpdateUserRequest.swift */,
+			);
+			path = RequestDTO;
+			sourceTree = "<group>";
+		};
+		D6EAD4222CDD3392001EFA45 /* ResponseDTO */ = {
+			isa = PBXGroup;
+			children = (
+				D6EAD4202CDD3219001EFA45 /* RegisterResponse.swift */,
+				D6EAD4272CDD4CA0001EFA45 /* LoginResponse.swift */,
+				D6EAD42B2CDD4D35001EFA45 /* MyHobbyResponse.swift */,
+				D6EAD4342CDD5E90001EFA45 /* UpdateUserResponse.swift */,
+			);
+			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
+		D6EAD4252CDD405A001EFA45 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D6EAD4232CDD4053001EFA45 /* Encodable+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D6EAD4262CDD427C001EFA45 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D6EAD3422CD60905001EFA45 /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		D6EAD42F2CDD5597001EFA45 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D6EAD4362CDD6418001EFA45 /* AuthManager.swift */,
+				D6EAD4302CDD55E4001EFA45 /* TokenManager.swift */,
+				D6EAD42D2CDD5591001EFA45 /* KeychainManager.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,11 +673,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62C4E462CC4262300394B45 /* UIStackView+.swift in Sources */,
+				D6EAD4212CDD3219001EFA45 /* RegisterResponse.swift in Sources */,
 				D6642F522CD3F152008218DA /* DownloadState.swift in Sources */,
+				D6EAD4352CDD5E90001EFA45 /* UpdateUserResponse.swift in Sources */,
 				D6EAD34C2CD60DDB001EFA45 /* LoginViewController.swift in Sources */,
 				D6642F782CD4D570008218DA /* MainTabBarController.swift in Sources */,
 				D62C4E472CC4262300394B45 /* UIView+.swift in Sources */,
 				D66B11772CC7EED30029E065 /* Review.swift in Sources */,
+				D6EAD42E2CDD5591001EFA45 /* KeychainManager.swift in Sources */,
 				D66B117F2CC824820029E065 /* AppDetailViewController.swift in Sources */,
 				D6642F562CD3F69B008218DA /* Int+.swift in Sources */,
 				D66B11742CC7EBA90029E065 /* ReviewCardView.swift in Sources */,
@@ -604,9 +688,11 @@
 				D66B117B2CC7F9400029E065 /* ToastView.swift in Sources */,
 				D62C4E482CC4262300394B45 /* UIView+Preview.swift in Sources */,
 				D62C4E492CC4262300394B45 /* UIViewController+Preview.swift in Sources */,
+				D6EAD41D2CDD1D2C001EFA45 /* LoginRequest.swift in Sources */,
 				D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */,
 				D66B116C2CC789A70029E065 /* UILabel+.swift in Sources */,
 				D66B11692CC5A0AE0029E065 /* AppMainViewController.swift in Sources */,
+				D6EAD42C2CDD4D35001EFA45 /* MyHobbyResponse.swift in Sources */,
 				D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */,
 				D6642F6F2CD4C649008218DA /* AppChartViewController.swift in Sources */,
 				D62C4E4A2CC4262300394B45 /* AppHeaderView.swift in Sources */,
@@ -615,10 +701,13 @@
 				D6642F742CD4C8CE008218DA /* AppChartTableViewCell.swift in Sources */,
 				D6642F602CD41B44008218DA /* BannerCollectionViewCell.swift in Sources */,
 				D6642F672CD49892008218DA /* AppStoreViewController.swift in Sources */,
+				D6EAD4372CDD6418001EFA45 /* AuthManager.swift in Sources */,
+				D6EAD4282CDD4CA0001EFA45 /* LoginResponse.swift in Sources */,
 				D62C4E4C2CC4262300394B45 /* NicknameDelegate.swift in Sources */,
 				D66B116E2CC7BD0F0029E065 /* AppRatingAndReviewView.swift in Sources */,
 				D6642F5C2CD40504008218DA /* AppItemCollectionViewCell.swift in Sources */,
 				D6642F652CD48CF8008218DA /* TitleHeaderView.swift in Sources */,
+				D6EAD4332CDD57A7001EFA45 /* UpdateUserRequest.swift in Sources */,
 				D6642F632CD483B1008218DA /* AppStoreDataSource.swift in Sources */,
 				D66B11712CC7E8870029E065 /* AppReviewView.swift in Sources */,
 				D62C4E4D2CC4262300394B45 /* ViewController.swift in Sources */,
@@ -627,11 +716,14 @@
 				D6EAD3452CD6092C001EFA45 /* RegisterRequest.swift in Sources */,
 				D62C4E4F2CC4262300394B45 /* SceneDelegate.swift in Sources */,
 				D66B11792CC7F6330029E065 /* Date+.swift in Sources */,
+				D6EAD4312CDD55E4001EFA45 /* TokenManager.swift in Sources */,
 				D6642F502CD3E6EE008218DA /* Banner.swift in Sources */,
 				D6EAD3472CD60949001EFA45 /* UserService.swift in Sources */,
 				D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */,
 				D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */,
+				D6EAD4242CDD4053001EFA45 /* Encodable+.swift in Sources */,
 				D6EAD3432CD60905001EFA45 /* NetworkError.swift in Sources */,
+				D6EAD41B2CDD1861001EFA45 /* UserAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
