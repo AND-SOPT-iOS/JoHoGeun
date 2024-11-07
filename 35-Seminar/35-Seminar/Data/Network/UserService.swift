@@ -58,10 +58,11 @@ class UserService {
         
         var headers: HTTPHeaders = [:]
         if api.isTokenRequired {
-            guard let token = tokenManager.getToken() else {
+            guard let userInfo = tokenManager.load() else {
                 completion(.failure(.unknownError))
                 return
             }
+            let token = userInfo.token
             headers["token"] = token
         }
         

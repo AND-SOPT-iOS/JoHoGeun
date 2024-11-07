@@ -12,18 +12,21 @@ final class KeychainManager {
     static let shared = KeychainManager()
     private init() {}
     
-    func save(key: String, value: String) -> Bool {
+    func save<T: Codable>(key: String, value: T) -> Bool {
+        guard let data = try? JSONEncoder().encode(value) else { return false }
+        
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: key,
-            kSecValueData as String: value.data(using: .utf8)!
+            kSecValueData as String: data
         ]
         
         SecItemDelete(query as CFDictionary)
+        
         return SecItemAdd(query as CFDictionary, nil) == errSecSuccess
     }
     
-    func load(key: String) -> String? {
+    func load<T: Codable>(key: String) -> T? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: key,
@@ -36,10 +39,11 @@ final class KeychainManager {
         
         if status == errSecSuccess {
             if let data = dataTypeRef as? Data,
-               let value = String(data: data, encoding: .utf8) {
+               let value = try? JSONDecoder().decode(T.self, from: data) {
                 return value
             }
         }
+        
         return nil
     }
     
@@ -48,6 +52,7 @@ final class KeychainManager {
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: key
         ]
+        
         return SecItemDelete(query as CFDictionary) == errSecSuccess
     }
     

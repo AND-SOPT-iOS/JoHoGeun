@@ -30,7 +30,8 @@ final class AuthManager {
         authService.login(username: username, password: password) { [weak self] result in
             switch result {
             case .success(let response):
-                _ = self?.tokenManager.save(token: response.result.token)
+                let userInfo = UserInfo(token: response.result.token, username: username)
+                _ = self?.tokenManager.save(userInfo)
                 completion(.success(()))
             case .failure(let error):
                 completion(.failure(error))
@@ -40,6 +41,10 @@ final class AuthManager {
     
     func logout() {
         _ = tokenManager.deleteToken()
+    }
+    
+    func getCurrentUser() -> UserInfo? {
+        return tokenManager.load()
     }
     
 }

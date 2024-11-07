@@ -9,8 +9,8 @@ import Foundation
 
 protocol TokenStorable {
     
-    func save(token: String) -> Bool
-    func getToken() -> String?
+    func save(_ userInfo: UserInfo) -> Bool
+    func load() -> UserInfo?
     func deleteToken() -> Bool
     
 }
@@ -19,15 +19,15 @@ final class TokenManager: TokenStorable {
     
     static let shared = TokenManager()
     private let keychain = KeychainManager.shared
-    private let tokenKey = "userToken"
+    private let tokenKey = "userInfoToken"
     
     private init() {}
     
-    func save(token: String) -> Bool {
-        return keychain.save(key: tokenKey, value: token)
+    func save(_ userInfo: UserInfo) -> Bool {
+        return keychain.save(key: tokenKey, value: userInfo)
     }
     
-    func getToken() -> String? {
+    func load() -> UserInfo? {
         return keychain.load(key: tokenKey)
     }
     
