@@ -22,6 +22,18 @@
 		D62C4E522CC4262300394B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62C4E432CC4262300394B45 /* LaunchScreen.storyboard */; };
 		D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C4E562CC4298800394B45 /* AppRatingView.swift */; };
 		D62C4E5A2CC430D800394B45 /* RatingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C4E592CC430D800394B45 /* RatingItemView.swift */; };
+		D6642F502CD3E6EE008218DA /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F4F2CD3E6EE008218DA /* Banner.swift */; };
+		D6642F522CD3F152008218DA /* DownloadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F512CD3F152008218DA /* DownloadState.swift */; };
+		D6642F562CD3F69B008218DA /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F552CD3F69B008218DA /* Int+.swift */; };
+		D6642F582CD3F830008218DA /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F572CD3F830008218DA /* AppItem.swift */; };
+		D6642F5C2CD40504008218DA /* AppItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F5B2CD40504008218DA /* AppItemCollectionViewCell.swift */; };
+		D6642F602CD41B44008218DA /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F5F2CD41B44008218DA /* BannerCollectionViewCell.swift */; };
+		D6642F632CD483B1008218DA /* AppStoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F622CD483B1008218DA /* AppStoreDataSource.swift */; };
+		D6642F652CD48CF8008218DA /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F642CD48CF8008218DA /* TitleHeaderView.swift */; };
+		D6642F672CD49892008218DA /* AppStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F662CD49892008218DA /* AppStoreViewController.swift */; };
+		D6642F6F2CD4C649008218DA /* AppChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F6E2CD4C649008218DA /* AppChartViewController.swift */; };
+		D6642F742CD4C8CE008218DA /* AppChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F732CD4C8CE008218DA /* AppChartTableViewCell.swift */; };
+		D6642F782CD4D570008218DA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6642F772CD4D570008218DA /* MainTabBarController.swift */; };
 		D66B115E2CC54BB00029E065 /* AppNewUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */; };
 		D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11602CC576250029E065 /* AppPreviewView.swift */; };
 		D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */; };
@@ -72,6 +84,18 @@
 		D62C4E442CC4262300394B45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D62C4E562CC4298800394B45 /* AppRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingView.swift; sourceTree = "<group>"; };
 		D62C4E592CC430D800394B45 /* RatingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingItemView.swift; sourceTree = "<group>"; };
+		D6642F4F2CD3E6EE008218DA /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		D6642F512CD3F152008218DA /* DownloadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadState.swift; sourceTree = "<group>"; };
+		D6642F552CD3F69B008218DA /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		D6642F572CD3F830008218DA /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
+		D6642F5B2CD40504008218DA /* AppItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6642F5F2CD41B44008218DA /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6642F622CD483B1008218DA /* AppStoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreDataSource.swift; sourceTree = "<group>"; };
+		D6642F642CD48CF8008218DA /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
+		D6642F662CD49892008218DA /* AppStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreViewController.swift; sourceTree = "<group>"; };
+		D6642F6E2CD4C649008218DA /* AppChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChartViewController.swift; sourceTree = "<group>"; };
+		D6642F732CD4C8CE008218DA /* AppChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChartTableViewCell.swift; sourceTree = "<group>"; };
+		D6642F772CD4D570008218DA /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D66B115D2CC54BB00029E065 /* AppNewUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNewUpdateView.swift; sourceTree = "<group>"; };
 		D66B11602CC576250029E065 /* AppPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreviewView.swift; sourceTree = "<group>"; };
 		D66B11632CC582DA0029E065 /* AppInfoAndDeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoAndDeveloperView.swift; sourceTree = "<group>"; };
@@ -152,6 +176,7 @@
 				D62C4E342CC4262300394B45 /* UIView+.swift */,
 				D66B116B2CC789A70029E065 /* UILabel+.swift */,
 				D66B11782CC7F6330029E065 /* Date.swift */,
+				D6642F552CD3F69B008218DA /* Int+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -177,8 +202,8 @@
 		D62C4E3E2CC4262300394B45 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D66B116A2CC5A0E60029E065 /* ViewControllers */,
-				D66B11592CC52C9F0029E065 /* Views */,
+				D6642F592CD40472008218DA /* AppStore */,
+				D6642F4E2CD3B223008218DA /* TossDetail */,
 				D62C4E542CC4267B00394B45 /* week1 */,
 			);
 			path = Presentation;
@@ -223,6 +248,62 @@
 				D62C4E432CC4262300394B45 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6642F4E2CD3B223008218DA /* TossDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D66B116A2CC5A0E60029E065 /* ViewControllers */,
+				D66B11592CC52C9F0029E065 /* Views */,
+			);
+			path = TossDetail;
+			sourceTree = "<group>";
+		};
+		D6642F592CD40472008218DA /* AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				D6642F792CD4D841008218DA /* Common */,
+				D6642F752CD4D36B008218DA /* ViewControllers */,
+				D6642F612CD4838A008218DA /* DataSources */,
+				D6642F5A2CD4047F008218DA /* Cells */,
+			);
+			path = AppStore;
+			sourceTree = "<group>";
+		};
+		D6642F5A2CD4047F008218DA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D6642F642CD48CF8008218DA /* TitleHeaderView.swift */,
+				D6642F5B2CD40504008218DA /* AppItemCollectionViewCell.swift */,
+				D6642F732CD4C8CE008218DA /* AppChartTableViewCell.swift */,
+				D6642F5F2CD41B44008218DA /* BannerCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D6642F612CD4838A008218DA /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				D6642F622CD483B1008218DA /* AppStoreDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		D6642F752CD4D36B008218DA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6642F662CD49892008218DA /* AppStoreViewController.swift */,
+				D6642F6E2CD4C649008218DA /* AppChartViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D6642F792CD4D841008218DA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D6642F772CD4D570008218DA /* MainTabBarController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D66B11592CC52C9F0029E065 /* Views */ = {
@@ -311,6 +392,9 @@
 			isa = PBXGroup;
 			children = (
 				D66B11762CC7EED30029E065 /* Review.swift */,
+				D6642F512CD3F152008218DA /* DownloadState.swift */,
+				D6642F4F2CD3E6EE008218DA /* Banner.swift */,
+				D6642F572CD3F830008218DA /* AppItem.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -463,9 +547,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62C4E462CC4262300394B45 /* UIStackView+.swift in Sources */,
+				D6642F522CD3F152008218DA /* DownloadState.swift in Sources */,
+				D6642F782CD4D570008218DA /* MainTabBarController.swift in Sources */,
 				D62C4E472CC4262300394B45 /* UIView+.swift in Sources */,
 				D66B11772CC7EED30029E065 /* Review.swift in Sources */,
 				D66B117F2CC824820029E065 /* AppDetailViewController.swift in Sources */,
+				D6642F562CD3F69B008218DA /* Int+.swift in Sources */,
 				D66B11742CC7EBA90029E065 /* ReviewCardView.swift in Sources */,
 				D62C4E5A2CC430D800394B45 /* RatingItemView.swift in Sources */,
 				D66B117B2CC7F9400029E065 /* ToastView.swift in Sources */,
@@ -475,15 +562,24 @@
 				D66B116C2CC789A70029E065 /* UILabel+.swift in Sources */,
 				D66B11692CC5A0AE0029E065 /* AppMainViewController.swift in Sources */,
 				D62C4E572CC4298800394B45 /* AppRatingView.swift in Sources */,
+				D6642F6F2CD4C649008218DA /* AppChartViewController.swift in Sources */,
 				D62C4E4A2CC4262300394B45 /* AppHeaderView.swift in Sources */,
+				D6642F582CD3F830008218DA /* AppItem.swift in Sources */,
 				D62C4E4B2CC4262300394B45 /* DetailViewController.swift in Sources */,
+				D6642F742CD4C8CE008218DA /* AppChartTableViewCell.swift in Sources */,
+				D6642F602CD41B44008218DA /* BannerCollectionViewCell.swift in Sources */,
+				D6642F672CD49892008218DA /* AppStoreViewController.swift in Sources */,
 				D62C4E4C2CC4262300394B45 /* NicknameDelegate.swift in Sources */,
 				D66B116E2CC7BD0F0029E065 /* AppRatingAndReviewView.swift in Sources */,
+				D6642F5C2CD40504008218DA /* AppItemCollectionViewCell.swift in Sources */,
+				D6642F652CD48CF8008218DA /* TitleHeaderView.swift in Sources */,
+				D6642F632CD483B1008218DA /* AppStoreDataSource.swift in Sources */,
 				D66B11712CC7E8870029E065 /* AppReviewView.swift in Sources */,
 				D62C4E4D2CC4262300394B45 /* ViewController.swift in Sources */,
 				D62C4E4E2CC4262300394B45 /* AppDelegate.swift in Sources */,
 				D62C4E4F2CC4262300394B45 /* SceneDelegate.swift in Sources */,
 				D66B11792CC7F6330029E065 /* Date.swift in Sources */,
+				D6642F502CD3E6EE008218DA /* Banner.swift in Sources */,
 				D66B11612CC576250029E065 /* AppPreviewView.swift in Sources */,
 				D66B11642CC582DA0029E065 /* AppInfoAndDeveloperView.swift in Sources */,
 			);

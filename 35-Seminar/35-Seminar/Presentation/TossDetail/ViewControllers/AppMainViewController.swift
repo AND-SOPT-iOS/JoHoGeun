@@ -32,13 +32,11 @@ final class AppMainViewController: UIViewController {
         setStyle()
         setUI()
         setLayout()
-        setNavigationBar()
         setDelegates()
     }
     
     private func setStyle() {
         self.view.backgroundColor = .systemBackground
-        navigationController?.setNavigationBarHidden(true, animated: false)
         
         headerView.configure(title: "토스", subtitle: "금융이 쉬워진다", image: UIImage(named: "toss"))
         
@@ -132,13 +130,7 @@ final class AppMainViewController: UIViewController {
         }
     }
     
-    private func setNavigationBar() {
-        navigationItem.titleView = navigationIconView
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: updateButton)
-    }
-    
     private func setDelegates() {
-        scrollView.delegate = self
         headerView.delegate = self
         newUpdateView.delegate = self
         infoAndDeveloperView.delegate = self
@@ -148,24 +140,6 @@ final class AppMainViewController: UIViewController {
 }
 
 // MARK: - Delegate
-
-extension AppMainViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offset = scrollView.contentOffset.y
-        let threshold: CGFloat = 100
-        
-        if offset > threshold {
-            navigationController?.setNavigationBarHidden(false, animated: true)
-            
-            let alpha = min(1, max(0, (offset - threshold) / 50))
-            navigationIconView.alpha = alpha
-            updateButton.alpha = alpha
-        } else {
-            navigationController?.setNavigationBarHidden(true, animated: true)
-        }
-    }
-}
-
 extension AppMainViewController: AppHeaderViewDelegate {
     func openButtonTapped() {
         // TODO: 열기버튼
