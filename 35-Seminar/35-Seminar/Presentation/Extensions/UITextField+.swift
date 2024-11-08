@@ -22,10 +22,6 @@ extension UITextField {
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: left, height: self.frame.height))
         self.leftView = leftView
         self.leftViewMode = .always
-        
-        let rightView = UIView(frame: CGRect(x: 0, y: 0, width: right, height: self.frame.height))
-        self.rightView = rightView
-        self.rightViewMode = .always
     }
     
 }
