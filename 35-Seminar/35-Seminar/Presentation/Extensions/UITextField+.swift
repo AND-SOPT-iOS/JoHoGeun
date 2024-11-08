@@ -9,7 +9,8 @@ import UIKit
 
 extension UITextField {
     
-    func configureDefaultSettings() {       
+    func configureDefaultSettings() {
+        self.backgroundColor = .systemGray6
         self.autocorrectionType = .no           // 자동 수정 비활성화
         self.spellCheckingType = .no            // 맞춤법 검사 비활성화
         self.autocapitalizationType = .none     // 자동 대문자 비활성화

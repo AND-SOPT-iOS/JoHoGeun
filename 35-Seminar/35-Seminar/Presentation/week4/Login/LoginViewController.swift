@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
         textField.layer.borderColor = UIColor.separator.cgColor
         textField.layer.borderWidth = 0.5
         textField.layer.cornerRadius = 12
-        textField.configureDefaultSettings()
         textField.setPadding()
+        textField.configureDefaultSettings()
         
         return textField
     }()
