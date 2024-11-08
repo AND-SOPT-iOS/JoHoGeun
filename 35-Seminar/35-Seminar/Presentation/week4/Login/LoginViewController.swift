@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
         textField.layer.borderColor = UIColor.separator.cgColor
         textField.layer.borderWidth = 0.5
         textField.layer.cornerRadius = 12
+        textField.configureDefaultSettings()
         textField.setPadding()
         
         return textField
@@ -29,6 +30,7 @@ class LoginViewController: UIViewController {
         textField.layer.borderColor = UIColor.separator.cgColor
         textField.layer.borderWidth = 0.5
         textField.layer.cornerRadius = 12
+        textField.configureDefaultSettings()
         textField.setPadding()
         
         return textField
@@ -78,6 +80,7 @@ class LoginViewController: UIViewController {
     
     private func setStyle() {
         view.backgroundColor = .systemBackground
+        navigationItem.title = "로그인"
     }
     
     private func setUI() {
@@ -136,7 +139,7 @@ class LoginViewController: UIViewController {
             case .success:
                 self?.navigateToProfileView(username: username)
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.showAlertForNetworkError(error)
             }
         }
     }
