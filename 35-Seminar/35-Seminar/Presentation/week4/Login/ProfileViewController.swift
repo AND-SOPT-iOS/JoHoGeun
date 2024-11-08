@@ -135,13 +135,19 @@ class ProfileViewController: UIViewController {
     
     private func updateHobbyButtonTapped() {
         let alert = UIAlertController(title: "취미 변경", message: nil, preferredStyle: .alert)
+        
         alert.addTextField { textField in
             textField.placeholder = "새로운 취미를 입력하세요"
         }
         
+        alert.addTextField { textField in
+            textField.placeholder = "비밀번호를 입력하세요"
+        }
+        
         let confirmAction = UIAlertAction(title: "확인", style: .default) { [weak self] _ in
-            guard let hobby = alert.textFields?.first?.text else { return }
-            self?.updateHobby(hobby: hobby)
+            guard let hobby = alert.textFields?[0].text,
+                  let password = alert.textFields?[1].text else { return }
+            self?.updateHobby(hobby: hobby, password: password)
         }
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel)
@@ -151,13 +157,13 @@ class ProfileViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func updateHobby(hobby: String) {
-        userService.updateUser(hobby: hobby, password: "") { [weak self] result in
+    private func updateHobby(hobby: String, password: String) {
+        userService.updateUser(hobby: hobby, password: password) { [weak self] result in
             switch result {
             case .success:
                 self?.fetchHobby()
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.showAlertForNetworkError(error)
             }
         }
     }
@@ -167,10 +173,10 @@ class ProfileViewController: UIViewController {
             switch result {
             case .success(let response):
                 DispatchQueue.main.async {
-                    self?.hobbyLabel.text = "당신의 취미는 \(response.result.hobby)"
+                    self?.hobbyLabel.text = "당신의 취미는 \(response.result.hobby) 이네요!"
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                self?.showAlertForNetworkError(error)
             }
         }
     }
