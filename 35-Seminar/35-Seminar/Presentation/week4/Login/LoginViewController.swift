@@ -152,13 +152,6 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController {
-
-    private func checkAutoLogin() {
-        if let userInfo = authManager.getCurrentUser(),
-           !userInfo.token.isEmpty {
-            navigateToProfileView(username: userInfo.username)
-        }
-    }
     
     private func navigateToProfileView(username: String) {
         let profileVC = ProfileViewController()
