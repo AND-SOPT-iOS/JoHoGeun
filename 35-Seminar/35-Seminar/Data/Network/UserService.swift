@@ -74,7 +74,7 @@ class UserService {
             headers: headers
         )
         .validate()
-        .responseDecodable(of: T.self) { [weak self] response in
+        .response { [weak self] response in
             guard let self = self,
                   let statusCode = response.response?.statusCode else {
                 completion(.failure(.unknownError))
@@ -83,7 +83,20 @@ class UserService {
             
             switch response.result {
             case .success(let data):
-                completion(.success(data))
+                if let data = data, !data.isEmpty {
+                    do {
+                        let decodedData = try JSONDecoder().decode(T.self, from: data)
+                        completion(.success(decodedData))
+                    } catch {
+                        completion(.failure(.decodingError))
+                    }
+                } else {
+                    if let emptyResponse = UpdateUserResponse() as? T {
+                        completion(.success(emptyResponse))
+                    } else {
+                        completion(.failure(.decodingError))
+                    }
+                }
             case .failure:
                 guard let data = response.data else {
                     completion(.failure(.unknownError))
