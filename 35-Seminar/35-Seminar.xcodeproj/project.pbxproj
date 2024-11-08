@@ -67,6 +67,7 @@
 		D6EAD43F2CDD70FB001EFA45 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD43E2CDD70FB001EFA45 /* ProfileViewController.swift */; };
 		D6EAD4412CDD737E001EFA45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4402CDD737E001EFA45 /* RegisterViewController.swift */; };
 		D6EAD4452CDD812C001EFA45 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4442CDD812C001EFA45 /* UserInfo.swift */; };
+		D6EAD4482CDD8999001EFA45 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EAD4472CDD8999001EFA45 /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		D6EAD43E2CDD70FB001EFA45 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D6EAD4402CDD737E001EFA45 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D6EAD4442CDD812C001EFA45 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		D6EAD4472CDD8999001EFA45 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -220,6 +222,7 @@
 				D62C4E342CC4262300394B45 /* UIView+.swift */,
 				D66B116B2CC789A70029E065 /* UILabel+.swift */,
 				D6EAD4382CDD700C001EFA45 /* UITextField+.swift */,
+				D6EAD4472CDD8999001EFA45 /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				D66B11742CC7EBA90029E065 /* ReviewCardView.swift in Sources */,
 				D62C4E5A2CC430D800394B45 /* RatingItemView.swift in Sources */,
 				D66B117B2CC7F9400029E065 /* ToastView.swift in Sources */,
+				D6EAD4482CDD8999001EFA45 /* UIViewController+.swift in Sources */,
 				D62C4E482CC4262300394B45 /* UIView+Preview.swift in Sources */,
 				D62C4E492CC4262300394B45 /* UIViewController+Preview.swift in Sources */,
 				D6EAD41D2CDD1D2C001EFA45 /* LoginRequest.swift in Sources */,

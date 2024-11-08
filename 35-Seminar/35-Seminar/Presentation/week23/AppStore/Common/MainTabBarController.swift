@@ -20,8 +20,8 @@ final class MainTabBarController: UITabBarController {
         )
         
         let gameVC = configureNavigationController(
-            with: configureDetailVC(title: "게임"),
-            title: "게임",
+            with: LoginViewController(),
+            title: "로그인",
             image: "gamecontroller",
             selectedImage: "gamecontroller.fill"
         )
