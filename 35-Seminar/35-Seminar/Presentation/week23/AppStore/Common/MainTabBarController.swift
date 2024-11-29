@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class MainTabBarController: UITabBarController {
     
@@ -45,14 +46,15 @@ final class MainTabBarController: UITabBarController {
             selectedImage: "arcade.stick.console"
         )
         
-        let searchVC = configureNavigationController(
-            with: configureDetailVC(title: "검색"),
-            title: "검색",
-            image: "magnifyingglass",
-            selectedImage: "magnifyingglass"
+        let appListView = AppListView()
+        let hostingController = UIHostingController(rootView: appListView)
+        hostingController.tabBarItem = UITabBarItem(
+            title: "앱",
+            image: UIImage(systemName: "square.grid.2x2"),
+            selectedImage: UIImage(systemName: "square.grid.2x2.fill")
         )
         
-        self.viewControllers = [todayVC, gameVC, appVC, arcadeVC, searchVC]
+        self.viewControllers = [todayVC, gameVC, appVC, arcadeVC, hostingController]
         
         self.tabBar.tintColor = .systemBlue
         self.tabBar.backgroundColor = .systemBackground
