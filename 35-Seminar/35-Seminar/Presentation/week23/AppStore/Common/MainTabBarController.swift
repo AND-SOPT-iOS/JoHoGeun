@@ -9,6 +9,11 @@ import UIKit
 
 final class MainTabBarController: UITabBarController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateLoginViewController()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,8 +25,8 @@ final class MainTabBarController: UITabBarController {
         )
         
         let gameVC = configureNavigationController(
-            with: configureDetailVC(title: "게임"),
-            title: "게임",
+            with: LoginViewController(),
+            title: "로그인",
             image: "gamecontroller",
             selectedImage: "gamecontroller.fill"
         )
@@ -73,6 +78,23 @@ final class MainTabBarController: UITabBarController {
         )
         rootViewController.title = title
         return navigationController
+    }
+    
+}
+
+extension MainTabBarController {
+    
+    private func updateLoginViewController() {
+        guard let navigationController = viewControllers?[1] as? UINavigationController else { return }
+        
+        if let userInfo = AuthManager.shared.getCurrentUser(),
+           !userInfo.token.isEmpty {
+            let profileVC = ProfileViewController()
+            profileVC.configure(with: userInfo.username)
+            navigationController.setViewControllers([profileVC], animated: false)
+        } else {
+            navigationController.setViewControllers([LoginViewController()], animated: false)
+        }
     }
     
 }
